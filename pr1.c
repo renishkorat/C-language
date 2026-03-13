@@ -8,9 +8,9 @@
     printf("Enter the bs :");
     scanf("%d", &bs);
 
-    hra_amo  = bs * (10 / 100);
-    da_amo = bs * (5 / 100);
-    ta_amo = bs * (8 / 100);
+    hra_amo  = bs * (10.0 / 100);
+    da_amo = bs * (5.0 / 100);
+    ta_amo = bs * (8.0 / 100);
     g_salary = bs + hra_amo + da_amo + ta_amo;
 
     printf("The gross salary is : %.2f", g_salary);
