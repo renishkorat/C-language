@@ -44,11 +44,11 @@ int main()
     {
         for (j = 1; j <= i; j++)
         {
-            printf(" ");
+            printf("  ");
         }
         for (k = i; k <= 5; k++)
         {
-            printf("%d", k);
+            printf("%d ", k);
         }
         printf("\n");
     }
@@ -65,17 +65,17 @@ int main()
     {
         for (j = 1; j <= i; j++)
         {
-            printf(" ");
+            printf("  ");
         }
-        for (k = i; k <= 5; k++)
+        for (k = 5; k >= i; k--)
         {
             if (k % 2 == 0)
             {
-                printf("0");
+                printf("0 ");
             }
             else
             {
-                printf("1");
+                printf("1 ");
             }
         }
         printf("\n");
