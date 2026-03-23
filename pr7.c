@@ -12,7 +12,7 @@ int main() {
     int choice, a, b;
 
     while(1) {
-        printf("\nPress 1 for +");
+        printf("Press 1 for +");
         printf("\nPress 2 for -");
         printf("\nPress 3 for *");
         printf("\nPress 4 for /");
