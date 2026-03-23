@@ -32,6 +32,8 @@ int main() {
         printf("Enter the second number: ");
         scanf("%d", &b);
 
+        printf("\n");
+
         switch(choice) {
             case 1:
                 printf("Addition of %d and %d is %d\n", a, b, add(a, b));
@@ -62,6 +64,7 @@ int main() {
             default:
                 printf("Invalid choice!\n");
         }
+        printf("\n");
     }
 
     return 0;
