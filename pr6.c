@@ -4,11 +4,11 @@
 
 int main() {
     int i, len, j = 0;
-    char str[20];
-    char rev[20];
+    char str[100];
+    char rev[100];
 
     printf("Enter the string: ");
-    fgets(str, 20, stdin);
+    fgets(str, 100, stdin);
 
     str[strcspn(str, "\n")] = '\0';
 

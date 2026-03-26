@@ -12,7 +12,7 @@ int main() {
     int choice, a, b;
 
     while(1) {
-        printf("\nPress 1 for +");
+        printf("Press 1 for +");
         printf("\nPress 2 for -");
         printf("\nPress 3 for *");
         printf("\nPress 4 for /");
@@ -31,6 +31,8 @@ int main() {
         scanf("%d", &a);
         printf("Enter the second number: ");
         scanf("%d", &b);
+
+        printf("\n");
 
         switch(choice) {
             case 1:
@@ -62,6 +64,7 @@ int main() {
             default:
                 printf("Invalid choice!\n");
         }
+        printf("\n");
     }
 
     return 0;
