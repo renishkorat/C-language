@@ -1,4 +1,4 @@
-//question 1
+// question 1
 #include <stdio.h>
 
 int main()
@@ -8,12 +8,12 @@ int main()
     char *ptr;
 
     printf("Enter any string: ");
-    fgets(str,20,stdin);
+    fgets(str, 20, stdin);
 
-    ptr = str; 
+    ptr = str;
 
-    
-    for(i=0; *ptr != '\0'; i++){
+    for (i = 0; *ptr != '\0'; i++)
+    {
         length++;
         ptr++;
     }
@@ -23,48 +23,45 @@ int main()
     return 0;
 }
 
-//question 2
+// question 2
 #include <stdio.h>
 
-int cube(int *p, int n)
+int cube(int *p, int r, int c)
 {
-    int i;
-    for(i = 0; i < n*n; i++)
+    int i, j;
+    printf("Cubes of array element:\n");
+    for (i = 0; i < r; i++)
     {
-        *(p + i) = (*(p + i)) * (*(p + i)) * (*(p + i));
+        for (j = 0; j < c; j++)
+        {
+            int value = *(p + i * c + j);
+            printf("%d ", value * value * value);
+        }
+        printf("\n");
     }
-
 }
 
 int main()
 {
-    int n, i, j;
-    
-    printf("Enter size: ");
-    scanf("%d", &n);
+    int r, c, i, j;
 
-    int a[n][n];
+    printf("Enter number of row: ");
+    scanf("%d", &r);
+    printf("Enter number of col: ");
+    scanf("%d", &c);
 
-    for(i = 0; i < n; i++)
+    int arr[r][c];
+
+    printf("Enter array elements:\n");
+    for (i = 0; i < r; i++)
     {
-        for(j = 0; j < n; j++)
+        for (j = 0; j < c; j++)
         {
-            printf("a[%d][%d]",i,j);
-            scanf("%d", &a[i][j]);
+            scanf("%d", &arr[i][j]);
         }
     }
 
-    cube(&a[0][0], n);
-
-    printf("Cubes:\n");
-    for(i = 0; i < n; i++)
-    {
-        for(j = 0; j < n; j++)
-        {
-            printf("%d ", a[i][j]);
-        }
-        printf("\n");
-    }
+    cube(&arr[0][0], r, c);
 
     return 0;
 }
